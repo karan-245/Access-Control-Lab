@@ -1,0 +1,21 @@
+<h2>Home Page</h2>
+
+{% if session.get('user_id') %}
+    <p>Logged in</p>
+    <a href="/logout">Logout</a>
+{% else %}
+    <a href="/login">Login</a>
+{% endif %}
+
+<h3>Users</h3>
+<ul>
+{% for user in users %}
+    <li>
+        {{ user.username }}
+        <a href="/profile/{{ user.id }}">View</a>
+    </li>
+{% endfor %}
+</ul>
+
+<!-- Hidden Admin Panel -->
+<!-- /hidden-admin-123 -->

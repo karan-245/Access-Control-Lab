@@ -1,3 +1,10 @@
-Web applications rely heavily on authentication and authorization mechanisms to protect sensitive data. Access control ensures that users can only perform actions permitted to them. However, improper implementation leads to vulnerabilities.
+# Access Control Vulnerability Lab
 
-This project replicates such vulnerabilities intentionally for educational purposes.
+## Project Overview
+This project demonstrates common access control vulnerabilities in web applications using a Flask-based system. It is designed for educational purposes to understand how improper authorization can lead to serious security risks.
+
+## Objectives
+Understand access control vulnerabilities
+Demonstrate real-world security flaws
+Learn how attackers exploit weak authorization
+Implement secure fixes

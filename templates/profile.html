@@ -1,7 +1,27 @@
-<h2>Profile</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <style>
+        body { font-family: Arial; background:#f4f4f4; text-align:center; }
+        .card { width:40%; margin:auto; background:white; padding:20px; border-radius:10px; }
+    </style>
+</head>
+<body>
 
-<p>ID: {{ user.id }}</p>
-<p>Username: {{ user.username }}</p>
-<p>Role: {{ user.role }}</p>
+<div class="card">
+    <h2>User Profile</h2>
 
-<a href="/">Back</a>
+    <p><b>ID:</b> {{ user.id }}</p>
+    <p><b>Username:</b> {{ user.username }}</p>
+    <p><b>Role:</b> {{ user.role }}</p>
+
+    <p style="color:red;">
+        Note: Try changing the URL ID to access other profiles.
+    </p>
+
+    <a href="/">Back</a>
+</div>
+
+</body>
+</html>

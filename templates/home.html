@@ -1,21 +1,40 @@
-<h2>Home Page</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body { font-family: Arial; background:#f4f4f4; text-align:center; }
+        .container { width:60%; margin:auto; background:white; padding:20px; border-radius:10px; }
+        a { text-decoration:none; color:blue; }
+        .nav { margin-bottom:20px; }
+        .user-box { background:#eee; padding:10px; margin:10px; border-radius:5px; }
+    </style>
+</head>
+<body>
 
-{% if session.get('user_id') %}
-    <p>Logged in</p>
-    <a href="/logout">Logout</a>
-{% else %}
-    <a href="/login">Login</a>
-{% endif %}
+<div class="container">
+    <h2>Access Control Lab</h2>
 
-<h3>Users</h3>
-<ul>
-{% for user in users %}
-    <li>
-        {{ user.username }}
-        <a href="/profile/{{ user.id }}">View</a>
-    </li>
-{% endfor %}
-</ul>
+    <div class="nav">
+        {% if session.get('user_id') %}
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
+    </div>
 
-<!-- Hidden Admin Panel -->
-<!-- /hidden-admin-123 -->
+    <h3>Users List</h3>
+
+    {% for user in users %}
+        <div class="user-box">
+            <b>{{ user.username }}</b><br>
+            <a href="/profile/{{ user.id }}">View Profile</a>
+        </div>
+    {% endfor %}
+
+    <!-- Hidden Admin Panel -->
+    <!-- Try to find: /hidden-admin-123 -->
+</div>
+
+</body>
+</html>
